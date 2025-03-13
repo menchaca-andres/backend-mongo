@@ -23,16 +23,6 @@ npm install
 
 ### 4. Inicializar tu proyecto Node.js
 
-```bash
-npm init -y
-```
-
-### 5. Instala las dependencias necesarias 
-
-```bash
-npm install express mongoose dotenv cors morgan
-```
-
 ### 6. Ejecutar el servidor
 
 ```bash
