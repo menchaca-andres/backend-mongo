@@ -21,9 +21,7 @@ Antes de empezar, asegúrate de tener instalados los siguientes componentes en t
 npm install
 ```
 
-### 4. Inicializar tu proyecto Node.js
-
-### 6. Ejecutar el servidor
+### 4. Ejecutar el servidor
 
 ```bash
 node src/app.js
