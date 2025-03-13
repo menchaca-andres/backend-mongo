@@ -13,23 +13,28 @@ Antes de empezar, asegúrate de tener instalados los siguientes componentes en t
 
 ### 1. Clona el repositorio
 
-Abre una terminal en tu directorio deseado y clona el repositorio:
+### 2. Ingresa al proyecto
+
+### 3. Instalar npm
 
 ```bash
-git clone https://github.com/tu-usuario/backend-mongo.git
+npm install
 ```
 
+### 4. Inicializar tu proyecto Node.js
 
+```bash
+npm init -y
+```
 
+### 5. Instala las dependencias necesarias 
 
-# backend-mongo
+```bash
+npm install express mongoose dotenv cors morgan
+```
 
-# Requirmientos
-- Tener node
-- Tener mongo 
+### 6. Ejecutar el servidor
 
-1. Clonar el repositorio.
-2. Ejecutar npm install
-3. Ejecutar npm init -y
-4. Ejecutar npm install express mongoose dotenv cors morgan
-5. Ejecutar node src/app.js
+```bash
+node src/app.js
+```
