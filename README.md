@@ -17,6 +17,8 @@ Abre una terminal en tu directorio deseado y clona el repositorio:
 
 ```bash
 git clone https://github.com/tu-usuario/backend-mongo.git
+```bash
+
 
 
 
