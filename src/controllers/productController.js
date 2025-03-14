@@ -1,6 +1,6 @@
 const Product = require("../models/Product");
 
-exports.createProduct = async (req, res) => {
+exports.crearProducto = async (req, res) => {
   try {
     const newProduct = new Product(req.body);
     await newProduct.save();
@@ -10,7 +10,7 @@ exports.createProduct = async (req, res) => {
   }
 };
 
-exports.getProducts = async (req, res) => {
+exports.obtenerProductos = async (req, res) => {
   try {
     const products = await Product.find().select('-__v');
     res.json(products);
@@ -19,7 +19,7 @@ exports.getProducts = async (req, res) => {
   }
 };
 
-exports.updateProduct = async (req, res) => {
+exports.actualizarProducto = async (req, res) => {
   try {
     const updatedProduct = await Product.findByIdAndUpdate(
       req.params.id,
@@ -32,7 +32,7 @@ exports.updateProduct = async (req, res) => {
   }
 };
 
-exports.deleteProduct = async (req, res) => {
+exports.eliminarProducto = async (req, res) => {
   try {
     await Product.findByIdAndDelete(req.params.id);
     res.json({ message: "Producto eliminado" });

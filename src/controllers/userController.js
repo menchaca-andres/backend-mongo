@@ -1,6 +1,6 @@
 const User = require("../models/User");
 
-exports.createUser = async (req, res) => {
+exports.crearUsuario = async (req, res) => {
   try {
     const newUser = new User(req.body);
     await newUser.save();
@@ -10,7 +10,7 @@ exports.createUser = async (req, res) => {
   }
 };
 
-exports.getUsers = async (req, res) => {
+exports.obtenerUsuarios = async (req, res) => {
   try {
     const users = await User.find().select('-__v');
     res.json(users);
@@ -20,14 +20,14 @@ exports.getUsers = async (req, res) => {
 };
 
 
-exports.updateUser = async (req, res) => {
+exports.actualizarUsuario = async (req, res) => {
   const updatedUser = await User.findByIdAndUpdate(req.params.id, req.body, {
     new: true,
   });
   res.json(updatedUser);
 };
 
-exports.deleteUser = async (req, res) => {
+exports.eliminarUsuario = async (req, res) => {
   await User.findByIdAndDelete(req.params.id);
   res.json({ message: "Usuario eliminado" });
 };
